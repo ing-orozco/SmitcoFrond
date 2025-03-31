@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div *ngFor="let field of formFields">
+    <label>{{ field.label }}</label>
+    <input *ngIf="field.type !== 'textarea'" [type]="field.type" [formControlName]="field.name" class="form-control"/>
+    <textarea *ngIf="field.type === 'textarea'" [formControlName]="field.name" class="form-control"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

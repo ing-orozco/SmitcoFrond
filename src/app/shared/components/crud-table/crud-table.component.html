@@ -1,0 +1,17 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th *ngFor="let col of columns">{{ col.label }}</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let col of columns">{{ row[col.key] }}</td>
+      <td>
+        <button class="btn btn-warning btn-sm" (click)="onEdit(row)">Editar</button>
+        <button class="btn btn-danger btn-sm" (click)="onDelete(row)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

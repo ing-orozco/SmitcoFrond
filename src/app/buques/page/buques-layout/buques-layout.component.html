@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <app-buques-table
+        [buques]="buques"
+        (edit)="editarBuque($event)"
+        (delete)="eliminarBuque($event)">
+      </app-buques-table>
+    </div>
+    <div class="col-3">
+      <app-buques-form
+        [selectedBuque]="selectedBuque || {}"
+        (onSave)="guardarBuque($event)">
+      </app-buques-form>
+    </div>
+  </div>
+</div>

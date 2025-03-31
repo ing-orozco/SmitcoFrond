@@ -1,0 +1,19 @@
+<div class="container d-flex align-items-center min-vh-100">
+  <div class="card">
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <a class="login">Log in</a>
+
+      <div class="inputBox">
+        <input type="text" formControlName="email" required>
+        <span class="user">Correo</span>
+      </div>
+
+      <div class="inputBox">
+        <input type="password" formControlName="password" required>
+        <span>Contraseña</span>
+      </div>
+
+      <button class="enter" type="submit" [disabled]="loginForm.invalid">Entrar</button>
+    </form>
+  </div>
+</div>

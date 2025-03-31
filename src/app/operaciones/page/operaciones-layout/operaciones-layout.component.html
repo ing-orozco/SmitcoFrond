@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <app-operaciones-table
+        [operaciones]="operaciones"
+        (edit)="editarOperacion($event)"
+        (delete)="eliminarOperacion($event)">
+      </app-operaciones-table>
+    </div>
+    <div class="col-3">
+      <app-operaciones-form
+        [selectedOperacion]="selectedOperacion"
+        (onSave)="guardarOperacion($event)">
+      </app-operaciones-form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <app-cargas-table
+        [cargas]="cargas"
+        (edit)="editarCarga($event)"
+        (delete)="eliminarCarga($event)">
+      </app-cargas-table>
+    </div>
+    <div class="col-3">
+      <app-cargas-form
+        [selectedCarga]="selectedCarga"
+        (onSave)="guardarCarga($event)">
+      </app-cargas-form>
+    </div>
+  </div>
+</div>

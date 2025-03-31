@@ -1,0 +1,6 @@
+<app-crud-table
+  [columns]="operacionColumns"
+  [data]="operaciones"
+  (edit)="editarOperacion($event)"
+  (delete)="eliminarOperacion($event)">
+</app-crud-table>
